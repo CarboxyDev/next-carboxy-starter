@@ -1,11 +1,11 @@
 'use client';
 
-import { SessionProvider } from 'next-auth/react';
-
 const Providers = (props: React.PropsWithChildren) => {
   const children = props.children;
 
-  return <SessionProvider>{children}</SessionProvider>;
+  /* Uncomment the line below to use NextAuth with Prisma adapter */
+  //return <SessionProvider>{children}</SessionProvider>;
+  return <>{children}</>;
 };
 
 export default Providers;
